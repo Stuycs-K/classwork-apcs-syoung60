@@ -4,26 +4,26 @@ public static void main(String[] args){
   int[] ary2 = {21, 32, 43, 54, 65, 76, 87, 98};
   int[] ary3 = {258, 51, 7, 729, 63, 3, 13, 97, 186, 815, 48, 173, 130, 402, 183, 245};
   int[] copy1 = returnCopy(ary1);
-  int[] copy1 = returnCopy(ary2);
-  int[] copy1 = returnCopy(ary3);
+  int[] copy2 = returnCopy(ary2);
+  int[] copy3 = returnCopy(ary3);
   
   System.out.println("Compare expected vs the concatArray: ary1 and ary2");
-  System.out.println("[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 21, 32, 43, 54, 65, 76, 87, 98]")
-  System.out.println(concatArray(ary1, ary2))
+  System.out.println("[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 21, 32, 43, 54, 65, 76, 87, 98]");
+  System.out.println(concatArray(ary1, ary2));
   System.out.println("Compare expected vs the concatArray: ary2 and ary3");
-  System.out.println("[21, 32, 43, 54, 65, 76, 87, 98, 258, 51, 7, 729, 63, 3, 13, 97, 186, 815, 48, 173, 130, 402, 183, 245]")
-  System.out.println(concatArray(ary2, ary3))
+  System.out.println("[21, 32, 43, 54, 65, 76, 87, 98, 258, 51, 7, 729, 63, 3, 13, 97, 186, 815, 48, 173, 130, 402, 183, 245]");
+  System.out.println(concatArray(ary2, ary3));
   System.out.println("Compare expected vs the concatArray: ary3 and ary1");
-  System.out.println("[258, 51, 7, 729, 63, 3, 13, 97, 186, 815, 48, 173, 130, 402, 183, 245, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]")
-  System.out.println(concatArray(ary3, ary1))
+  System.out.println("[258, 51, 7, 729, 63, 3, 13, 97, 186, 815, 48, 173, 130, 402, 183, 245, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]");
+  System.out.println(concatArray(ary3, ary1));
 
-  System.out.println("Comparing Array 1: " + arrayToString(ary1) + ", to its copy: " arrayToString(copy1));
+  System.out.println("Comparing Array 1: " + arrayToString(ary1) + ", to its copy: " + arrayToString(copy1));
   System.out.println("Do the addresses match? " + (ary1 == copy1));
   
-  System.out.println("Comparing Array 2: " + arrayToString(ary2) + ", to its copy: " arrayToString(copy2));
+  System.out.println("Comparing Array 2: " + arrayToString(ary2) + ", to its copy: " + arrayToString(copy2));
   System.out.println("Do the addresses match? " + (ary2 == copy3));
 
-  System.out.println("Comparing Array 3: " + arrayToString(ary3) + ", to its copy: " arrayToString(copy3));
+  System.out.println("Comparing Array 3: " + arrayToString(ary3) + ", to its copy: " + arrayToString(copy3));
   System.out.println("Do the addresses match? " + (ary3 == copy3));
   
 
@@ -52,7 +52,7 @@ public static String arrayToString(int[] nums){
 //BEFORE write code: Discuss with your neighbors how do you test if the arrays match, 
 //and how do you test that they are not the same array?
 public static int[] returnCopy(int[]ary){
-  int[] ans = new int[ary.length]
+  int[] ans = new int[ary.length];
   for(int i = 0; i < ary.length; i++)
   {
     ans[i] = ary[i];
