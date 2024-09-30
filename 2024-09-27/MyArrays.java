@@ -6,16 +6,28 @@ public static void main(String[] args){
   int[] copy1 = returnCopy(ary1);
   int[] copy2 = returnCopy(ary2);
   int[] copy3 = returnCopy(ary3);
+
+  /* code used to debug, the same as below
+  System.out.println(arrayToString(ary1));
+  System.out.println(arrayToString(copy2));
+  System.out.println("Do the addresses match? " + (ary1 == copy1));
+  copy1[3] = 1000;
+  System.out.println("The original: " + arrayToString(ary1) + " vs the copy: " + arrayToString(copy1));
+   System.out.println("Compare expected vs the concatArray: ary1 and ary2");
+  System.out.println("[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 21, 32, 43, 54, 65, 76, 87, 98]");
+  System.out.println(arrayToString(concatArray(ary1, ary2)));
+  */
+
   
   System.out.println("Compare expected vs the concatArray: ary1 and ary2");
   System.out.println("[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 21, 32, 43, 54, 65, 76, 87, 98]");
-  System.out.println(concatArray(ary1, ary2));
+  System.out.println(arrayToString(concatArray(ary1, ary2)));
   System.out.println("Compare expected vs the concatArray: ary2 and ary3");
   System.out.println("[21, 32, 43, 54, 65, 76, 87, 98, 258, 51, 7, 729, 63, 3, 13, 97, 186, 815, 48, 173, 130, 402, 183, 245]");
-  System.out.println(concatArray(ary2, ary3));
+  System.out.println(arrayToString(concatArray(ary2, ary3)));
   System.out.println("Compare expected vs the concatArray: ary3 and ary1");
   System.out.println("[258, 51, 7, 729, 63, 3, 13, 97, 186, 815, 48, 173, 130, 402, 183, 245, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]");
-  System.out.println(concatArray(ary3, ary1));
+  System.out.println(arrayToString(concatArray(ary3, ary1)));
 
   System.out.println("Comparing Array 1: " + arrayToString(ary1) + ", to its copy: " + arrayToString(copy1));
   System.out.println("Do the addresses match? " + (ary1 == copy1));
@@ -34,6 +46,7 @@ public static void main(String[] args){
   System.out.println("The original: " + arrayToString(ary2) + " vs the copy: " + arrayToString(copy2));
   copy3[3] = 1000;
   System.out.println("The original: " + arrayToString(ary3) + " vs the copy: " + arrayToString(copy3));
+
 }
 
 
@@ -67,15 +80,18 @@ public static int[] returnCopy(int[]ary){
 //The order of the values should remain the same.
 
 public static int[] concatArray(int[]ary1,int[]ary2){
-  int[] ans = new int[ary1.length + ary2.length];
-  int i = 0;
-  for(; i < ary1.length; i++)
+  int newLength = ary1.length + ary2.length;
+  int[] ans = new int[newLength];
+
+  for(int i = 0; i < ary1.length; i++)
   {
     ans[i] = ary1[i];
   }
-  for(i = ary1.length; i < ary1.length + ary2.length; i++)
+  for(int i = 0; i < ary2.length; i++)
   {
     ans[i + ary1.length] = ary2[i];
+    //ans length is already set so dont worry about that
+    //i is now only for ary2
   }
   return ans;
 }
