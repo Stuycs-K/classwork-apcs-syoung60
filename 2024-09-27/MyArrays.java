@@ -1,8 +1,10 @@
 public class MyArrays{
 public static void main(String[] args){
+  int[] ary0 = {};
   int[] ary1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
   int[] ary2 = {21, 32, 43, 54, 65, 76, 87, 98};
   int[] ary3 = {258, 51, 7, 729, 63, 3, 13, 97, 186, 815, 48, 173, 130, 402, 183, 245};
+  int[] copy0 = returnCopy(ary0);
   int[] copy1 = returnCopy(ary1);
   int[] copy2 = returnCopy(ary2);
   int[] copy3 = returnCopy(ary3);
@@ -18,7 +20,7 @@ public static void main(String[] args){
   System.out.println(arrayToString(concatArray(ary1, ary2)));
   */
 
-  
+  System.out.println("Testing cancatArray");
   System.out.println("Compare expected vs the concatArray: ary1 and ary2");
   System.out.println("[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 21, 32, 43, 54, 65, 76, 87, 98]");
   System.out.println(arrayToString(concatArray(ary1, ary2)));
@@ -28,7 +30,11 @@ public static void main(String[] args){
   System.out.println("Compare expected vs the concatArray: ary3 and ary1");
   System.out.println("[258, 51, 7, 729, 63, 3, 13, 97, 186, 815, 48, 173, 130, 402, 183, 245, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0]");
   System.out.println(arrayToString(concatArray(ary3, ary1)));
+  System.out.println("Compare expected vs the concatArray: ary0 and ary1");
+  System.out.println("[1, 2, 3, 4, 5, 6, 7, 8, 9, 0]");
+  System.out.println(arrayToString(concatArray(ary0, ary1)));
 
+  System.out.println("\nComparing originals and copies");
   System.out.println("Comparing Array 1: " + arrayToString(ary1) + ", to its copy: " + arrayToString(copy1));
   System.out.println("Do the addresses match? " + (ary1 == copy1));
   
@@ -39,6 +45,7 @@ public static void main(String[] args){
   System.out.println("Do the addresses match? " + (ary3 == copy3));
   
 
+  System.out.println("\nMore checking if the copies are different than the originals");
   System.out.println("If I change the third value of the copies to 10000, does the original change?");
   copy1[3] = 1000;
   System.out.println("The original: " + arrayToString(ary1) + " vs the copy: " + arrayToString(copy1));
