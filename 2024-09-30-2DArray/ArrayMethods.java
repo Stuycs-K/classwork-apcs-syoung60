@@ -21,15 +21,15 @@ public static void main(String[] args){
   System.out.println("Expected for arr3:  [[2, 8, 3, 4], [1, 0, 5, 9, 5], [6, 2, 9]]");
   System.out.println("Observed for arr3:  " + arrToString(arr3));
 
-  System.out.println("\n Test if arr2DSum can return correct sum of values in array");
+  System.out.println("\nTest if arr2DSum can return correct sum of values in array");
   System.out.println("Expected for arr0: 1170");
-  System.out.println("Observed for arr0: " + arrToString(arr2DSum(arr0)) + "  equal? " + 1170 == arr2DSum(arr0));
+  System.out.println("Observed for arr0: " + arr2DSum(arr0) + "  equal? " + (1170 == arr2DSum(arr0)));
   System.out.println("Expected for arr1: 1793");
-  System.out.println("Observed for arr1: " + arrToString(arr2DSum(arr1)) + "  equal? " + 1793 == arr2DSum(arr1));
+  System.out.println("Observed for arr1: " + arr2DSum(arr1) + "  equal? " + (1793 == arr2DSum(arr1)));
   System.out.println("Expected for arr2: 442");
-  System.out.println("Observed for arr2: " + arrToString(arr2DSum(arr2)) + "  equal? " + 442 == arr2DSum(arr2));
+  System.out.println("Observed for arr2: " + arr2DSum(arr2) + "  equal? " + (442 == arr2DSum(arr2)));
   System.out.println("Expected for arr3: 54");
-  System.out.println("Observed for arr3: " + arrToString(arr2DSum(arr3)) + "  equal? " + 54 == arr2DSum(arr3));
+  System.out.println("Observed for arr3: " + arr2DSum(arr3) + "  equal? " + (54 == arr2DSum(arr3)));
 /*
   System.out.println("\n Test if swapRC can return correct array");
   System.out.println("Expected for arr1: [[4, 40], [76, 951], [208, 20], [14, 480]]");
@@ -69,9 +69,18 @@ public static String arrToString(int[][]ary){
 }
 
 /*Return the sum of all of the values in the 2D array */
-//public static int arr2DSum(int[][]nums){
+public static int arr2DSum(int[][]nums){
+  int sum = 0;
+  for(int i = 0; i < nums.length; i++)
+  {
+    for (int j = 0; j < nums[i].length; j++)
+    {
+      sum = sum + nums[i][j];
+    }
+  }
+  return sum;
   //use a nested loop to solve this
-//}
+}
 
 /**Rotate an array by returning a new array with the rows and columns swapped.
   * You may assume the array is rectangular and neither rows nor cols is 0.
