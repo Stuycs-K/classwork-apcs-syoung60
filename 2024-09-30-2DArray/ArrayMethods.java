@@ -11,7 +11,6 @@ public static void main(String[] args){
 //System.out.println(arr0[0].length);
   
   System.out.println("Test if arrToStrings can make strings of 2D arrays");
-
   System.out.println("Expected for arr0:  [[89, 1, 73], [710, 35, 5, 2], [0], [46, 209]]");
   System.out.println("Observed for arr0:  " + arrToString(arr0));
   System.out.println("Expected for arr1:  [[4, 76, 208, 14], [40, 951, 20, 480]]"); 
@@ -36,9 +35,7 @@ public static void main(String[] args){
   System.out.println("Observed for arr1: " + arrToString(swapRC(arr1)));
   System.out.println("Expected for arr2: [[18, 10, 38 ,33], [34, 7, 16, 9], [19, 46, 3, 47], [28, 39, 91, 4]]");
   System.out.println("Observed for arr2: " + arrToString(swapRC(arr2)));
-
 }
-
 
 public static String arrToString(int[] nums){
   String ans = "[";
@@ -50,14 +47,6 @@ public static String arrToString(int[] nums){
   return ans + "]";
 }
 
-//3. Write arrToString, with a 2D array parameter.
-//Note: Different parameters are allowed with the same function name.
-/**Return a String that represets the 2D array in the format:
-  * "[[2, 3, 4], [5, 6, 7], [2, 4, 9]]"
-  * Note the comma+space between values, and between arrays
-  * You are encouraged to notice that you may want to re-use
-  * previous code, but you should NOT duplicate that code. (Don't copy/paste or retype it)
-  */
 public static String arrToString(int[][]ary){
   String result = "[";
   for(int j = 0; j < ary.length; j++)
@@ -79,23 +68,18 @@ public static int arr2DSum(int[][]nums){
     }
   }
   return sum;
-  //use a nested loop to solve this
 }
 
-/**Rotate an array by returning a new array with the rows and columns swapped.
-  * You may assume the array is rectangular and neither rows nor cols is 0.
-  * e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
-  */
+//Rotate an array by returning a new array with the rows and columns swapped.
 public static int[][] swapRC(int[][]nums){
   int[][] ans = new int[nums[0].length][nums.length];
   for(int i = 0; i < nums[0].length; i++)//i is term in og array
   {
-    for(int j = 0; j < nums.length; j++)
+    for(int j = 0; j < nums.length; j++)//j is the array in the og 2d array
     {
       ans[i][j] = nums[j][i];
     }
   }
- // return new int[1][1];
  return ans;
 }
 
