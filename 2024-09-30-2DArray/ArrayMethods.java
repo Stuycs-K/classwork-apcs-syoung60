@@ -94,7 +94,7 @@ public static void replaceNegative(int[][] vals){
   {
     for(int j = 0; j < vals[i].length; j++)
     {
-      if
+      if(j == i)
     }
   }
 
