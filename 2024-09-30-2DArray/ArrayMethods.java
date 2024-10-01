@@ -3,11 +3,18 @@ public class ArrayMethods{
 //Xinlin Yin xinliny3@nycstudents.net
 
 public static void main(String[] args){
+  int[][] arr0 = new int[][] {{89, 1, 73}, {710, 35, 5, 2}, {0}, {46, 209}}; //jagged
+  int[][] arr1 = new int[][] {{4, 76, 208, 14}, {40, 951, 20, 480}}; //rectangle
+  int[][] arr2 = new int[][] {{18, 34, 19, 28}, {10, 7, 46, 39}, {38, 16, 3, 91}, {33, 9, 47, 4}}; //square
+  int[][] arr3 = new int[][] {{2, 8, 3, 4}, {1, 0, 5, 9, 5}, {6, 2, 9}}; //jagged
+
+  System.out.println("Test strings of 2D arrays");
+  System.out.println("Expected:  ")
 
 }
 
 
-public static String arrayToString(int[] nums){
+public static String arrToString(int[] nums){
   String ans = "[";
   for(int i = 0; i < nums.length; i++)
   {
@@ -16,16 +23,7 @@ public static String arrayToString(int[] nums){
   }
   return ans + "]";
 }
-//1. Write both your names + emails at the top of the document as a comment.
 
-//2. Copy your arrToString method from before.
-/**Return a String that represets the array in the format:
-* "[2, 3, 4, 9]"
-* Note the comma+space between values, and between values
-*/
-public static String arrToString(int[]ary){
-  return "";
-}
 
 //3. Write arrToString, with a 2D array parameter.
 //Note: Different parameters are allowed with the same function name.
