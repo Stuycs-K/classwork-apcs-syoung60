@@ -30,13 +30,13 @@ public static void main(String[] args){
   System.out.println("Observed for arr2: " + arr2DSum(arr2) + "  equal? " + (442 == arr2DSum(arr2)));
   System.out.println("Expected for arr3: 54");
   System.out.println("Observed for arr3: " + arr2DSum(arr3) + "  equal? " + (54 == arr2DSum(arr3)));
-/*
+
   System.out.println("\n Test if swapRC can return correct array");
   System.out.println("Expected for arr1: [[4, 40], [76, 951], [208, 20], [14, 480]]");
   System.out.println("Observed for arr1: " + arrToString(swapRC(arr1)));
   System.out.println("Expected for arr2: [[18, 10, 38 ,33], [34, 7, 16, 9], [19, 46, 3, 47], [28, 39, 91, 4]]");
   System.out.println("Observed for arr2: " + arrToString(swapRC(arr2)));
-*/
+
 }
 
 
@@ -71,7 +71,7 @@ public static String arrToString(int[][]ary){
 /*Return the sum of all of the values in the 2D array */
 public static int arr2DSum(int[][]nums){
   int sum = 0;
-  for(int i = 0; i < nums.length; i++)
+  for(int i = 0; i < nums.length; i++) 
   {
     for (int j = 0; j < nums[i].length; j++)
     {
@@ -86,8 +86,17 @@ public static int arr2DSum(int[][]nums){
   * You may assume the array is rectangular and neither rows nor cols is 0.
   * e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
   */
-//public static int[][] swapRC(int[][]nums){
+public static int[][] swapRC(int[][]nums){
+  int[][] ans = new int[nums[0].length][nums.length];
+  for(int i = 0; i < nums[0].length; i++)//i is term in og array
+  {
+    for(int j = 0; j < nums.length; j++)
+    {
+      ans[i][j] = nums[j][i];
+    }
+  }
  // return new int[1][1];
-//}
+ return ans;
+}
 
 }
