@@ -8,8 +8,17 @@ public static void main(String[] args){
   int[][] arr2 = new int[][] {{18, 34, 19, 28}, {10, 7, 46, 39}, {38, 16, 3, 91}, {33, 9, 47, 4}}; //square
   int[][] arr3 = new int[][] {{2, 8, 3, 4}, {1, 0, 5, 9, 5}, {6, 2, 9}}; //jagged
 
-  System.out.println("Test strings of 2D arrays");
-  System.out.println("Expected:  ")
+  System.out.println("Test if arrToStrings can make strings of 2D arrays");
+
+  System.out.println("Expected:  [[89, 1, 73], [710, 35, 5, 2], [0], [46, 209]]");
+  System.out.println("Observed:  " + arrToString(arr0));
+  System.out.println("Expected:  [[4, 76, 208, 14], [40, 951, 20, 480]]");
+  System.out.println("Observed:  " + arrToString(arr1));
+  System.out.println("Expected:  [[18, 34, 19, 28], [10, 7, 46, 39], [38, 16, 3, 91], [33, 9, 47, 4]]");
+  System.out.println("Observed:  " + arrToString(arr2));
+  System.out.println("Expected:  [[2, 8, 3, 4], [1, 0, 5, 9, 5], [6, 2, 9]]");
+  System.out.println("Observed:  " + arrToString(arr3));
+
 
 }
 
