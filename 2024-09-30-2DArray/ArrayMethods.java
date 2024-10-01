@@ -12,7 +12,7 @@ public static void main(String[] args){
 
   System.out.println("Expected for arr0:  [[89, 1, 73], [710, 35, 5, 2], [0], [46, 209]]");
   System.out.println("Observed for arr0:  " + arrToString(arr0));
-  System.out.println("Expected for arr1:  [[4, 76, 208, 14], [40, 951, 20, 480]]");
+  System.out.println("Expected for arr1:  [[4, 76, 208, 14], [40, 951, 20, 480]]"); 
   System.out.println("Observed for arr1:  " + arrToString(arr1));
   System.out.println("Expected for arr2:  [[18, 34, 19, 28], [10, 7, 46, 39], [38, 16, 3, 91], [33, 9, 47, 4]]");
   System.out.println("Observed for arr2:  " + arrToString(arr2));
@@ -21,15 +21,19 @@ public static void main(String[] args){
 
   System.out.println("\n Test if arr2DSum can return correct sum of values in array");
   System.out.println("Expected for arr0: 1170");
-  System.out.println("Observed for arr0: " + arr2DSum(arr0) + "  equal? " + 1170 == arr2DSum(arr0));
+  System.out.println("Observed for arr0: " + arrToString(arr2DSum(arr0)) + "  equal? " + 1170 == arr2DSum(arr0));
   System.out.println("Expected for arr1: 1793");
-  System.out.println("Observed for arr1: " + arr2DSum(arr1) + "  equal? " + 1793 == arr2DSum(arr1));
+  System.out.println("Observed for arr1: " + arrToString(arr2DSum(arr1)) + "  equal? " + 1793 == arr2DSum(arr1));
   System.out.println("Expected for arr2: 442");
-  System.out.println("Observed for arr2: " + arr2DSum(arr2) + "  equal? " + 442 == arr2DSum(arr2));
+  System.out.println("Observed for arr2: " + arrToString(arr2DSum(arr2)) + "  equal? " + 442 == arr2DSum(arr2));
   System.out.println("Expected for arr3: 54");
-  System.out.println("Observed for arr3: " + arr2DSum(arr3) + "  equal? " + 54 == arr2DSum(arr3));
+  System.out.println("Observed for arr3: " + arrToString(arr2DSum(arr3)) + "  equal? " + 54 == arr2DSum(arr3));
 
-  
+  System.out.println("\n Test if swapRC can return correct array");
+  System.out.println("Expected for arr1: [[4, 40], [76, 951], [208, 20], [14, 480]]");
+  System.out.println("Observed for arr1: " + arrToString(swapRC(arr1)));
+  System.out.println("Expected for arr2: [[18, 10, 38 ,33], [34, 7, 16, 9], [19, 46, 3, 47], [28, 39, 91, 4]]");
+  System.out.println("Observed for arr2: " + arrToString(swapRC(arr2)));
 
 
 }
