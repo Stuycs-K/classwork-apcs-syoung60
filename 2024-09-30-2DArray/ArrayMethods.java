@@ -94,10 +94,13 @@ public static void replaceNegative(int[][] vals){
   {
     for(int j = 0; j < vals[i].length; j++)
     {
-      if(j == i)
+      if(vals[i][j] < 0)
+      {
+        vals[i][j] = 0;
+        if(j == i) vals[i][j] = -1;
+      }
     }
   }
-
 }
 
 //4. Make a copy of the given 2d array.
