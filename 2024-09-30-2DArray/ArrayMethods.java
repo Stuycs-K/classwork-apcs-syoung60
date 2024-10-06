@@ -7,6 +7,10 @@ public static void main(String[] args){
   int[][] arr1 = new int[][] {{4, 76, 208, 14}, {40, 951, 20, 480}}; //rectangle
   int[][] arr2 = new int[][] {{18, 34, 19, 28}, {10, 7, 46, 39}, {38, 16, 3, 91}, {33, 9, 47, 4}}; //square
   int[][] arr3 = new int[][] {{2, 8, 3, 4}, {1, 0, 5, 9, 5}, {6, 2, 9}}; //jagged
+  int[][] arr0neg = new int[][] {{89, 1, 73}, {710, 35, -5, 2}, {0}, {46, 209}}; //jagged
+  int[][] arr1neg = new int[][] {{4, 76, -208, 14}, {40, -951, -20, 480}}; //rectangle
+  int[][] arr2neg = new int[][] {{18, -34, 19, 28}, {10, 7, 46, 39}, {38, -16, 3, -91}, {33, 9, -47, -4}}; //square
+  int[][] arr3neg = new int[][] {{-2, 8, -3, 4}, {1, 0, 5, -9, 5}, {6, 2, -9}}; //jagged
 
 //System.out.println(arr0[0].length);
 
