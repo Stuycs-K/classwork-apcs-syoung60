@@ -42,27 +42,38 @@ public static void main(String[] args){
 
   System.out.println("\n Test if copy can return a copy");
   System.out.println("Do the addresses of the og and copy match? arr0: " + (arr0 == copy(arr0)));
-  System.out.println("Original: " + arr0);
-  System.out.println("Copy:     " + copy(arr0));
+  System.out.println("Original: " + arrToString(arr0));
+  System.out.println("Copy:     " + arrToString(copy(arr0)));
   System.out.println("Do the addresses of the og and copy match? arr0: " + (arr1 == copy(arr1)));
-  System.out.println("Original: " + arr1);
-  System.out.println("Copy:     " + copy(arr1));
+  System.out.println("Original: " + arrToString(arr1));
+  System.out.println("Copy:     " + arrToString(copy(arr1)));
   System.out.println("Do the addresses of the og and copy match? arr0: " + (arr2neg == copy(arr2neg)));
-  System.out.println("Original: " + arr2neg);
-  System.out.println("Copy:     " + copy(arr2neg));
+  System.out.println("Original: " + arrToString(arr2neg));
+  System.out.println("Copy:     " + arrToString(copy(arr2neg)));
   System.out.println("Do the addresses of the og and copy match? arr0: " + (arr3neg == copy(arr3neg)));
-  System.out.println("Original: " + arr3neg);
-  System.out.println("Copy:     " + copy(arr3neg));
+  System.out.println("Original: " + arrToString(arr3neg));
+  System.out.println("Copy:     " + arrToString(copy(arr3neg)));
 
   System.out.println("\n Test if replaceNegative can change existing array");
-  System.out.println("Original: " + arr0neg);
-  System.out.println("Changed:  " + replaceNegative(arr0neg));
-  System.out.println("Original: " + arr1neg);
-  System.out.println("Changed:  " + replaceNegative(arr1neg));
-  System.out.println("Original: " + arr2neg);
-  System.out.println("Changed:  " + replaceNegative(arr2neg));
-  System.out.println("Original: " + arr3neg);
-  System.out.println("Changed:  " + replaceNegative(arr3neg));
+  System.out.println("Original: " + arrToString(arr0neg));
+  replaceNegative(arr0neg);
+  System.out.println("Expected: " + "[[89, 1, 73], [710, 35, 0, 2], [0], [46, 209]]");
+  System.out.println("Changed:  " + arrToString(arr0neg));
+
+  System.out.println("Original: " + arrToString(arr1neg));
+  replaceNegative(arr1neg);
+  System.out.println("Expected: " + "[[4, 76, 0, 14], [40, 1, 0, 480]]");
+  System.out.println("Changed:  " + arrToString(arr1neg));
+
+  System.out.println("Original: " + arrToString(arr2neg));
+  replaceNegative(arr2neg);
+  System.out.println("Expected: " + "[[18, 0, 19, 28], [10, 7, 46, 39], [38, 0, 3, 0], [33, 9, 0, 1]]");
+  System.out.println("Changed:  " + arrToString(arr2neg));
+
+  System.out.println("Original: " + arrToString(arr3neg));
+  replaceNegative(arr3neg);
+  System.out.println("Expected: " + "[[1, 8, 0, 4], [1, 0, 5, 0, 5], [6, 2, 1]]");
+  System.out.println("Changed:  " + arrToString(arr3neg));
 
 }
 
@@ -119,14 +130,14 @@ public static int[][] swapRC(int[][]nums){
 //that negative with the value 1
 //-All other negatives replace with 0
 public static void replaceNegative(int[][] vals){
-  for(int i = 0; i < val.length; i++)
+  for(int i = 0; i < vals.length; i++)
   {
     for(int j = 0; j < vals[i].length; j++)
     {
       if(vals[i][j] < 0)
       {
         vals[i][j] = 0;
-        if(j == i) vals[i][j] = -1;
+        if(j == i) vals[i][j] = 1;
       }
     }
   }
