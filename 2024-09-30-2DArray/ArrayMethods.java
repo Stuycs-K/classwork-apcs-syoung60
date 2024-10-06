@@ -113,9 +113,23 @@ public static void replaceNegative(int[][] vals){
 //You SHOULD write a helper method for this.
 //If you don't see a good way to do that, you should stop and look at prior methods.
 public static int[][] copy(int[][] nums){
-  return null;//placeholder so it compiles
+  int[][] result = new int[nums.length][];
+  for (int i = 0; i < nums.length; i++)
+  {
+    result[i] = returnCopy(nums[i]);
+  }
+  return result;
 }
 
-
+//helper method from MyArrays 2024/09/27
+public static int[] returnCopy(int[]ary){
+  int[] ans = new int[ary.length];
+  for(int i = 0; i < ary.length; i++)
+  {
+    ans[i] = ary[i];
+  }
+  return ans;
+  
+}
 
 }
