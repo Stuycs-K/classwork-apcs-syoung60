@@ -10,18 +10,38 @@ public class ArrayDemo{
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
   public static String arrToString(int[]ary){
-    return "";
+    String ans = "[";
+    for(int i = 0; i < nums.length; i++)
+    {
+      ans = ans + nums[i];
+      if(i != nums.length - 1) ans = ans + ", ";
+    }
+    return ans + "]";
   }
 
   //The name of different methods can be the same,
   //as long as the parameters are different! (type and/or quantity must be different)
   //Pro tip: you should be using your 1D arrToString in this method!
   public static String arrToString(int[][]ary){
-    return "";
+    String result = "[";
+    for(int j = 0; j < ary.length; j++)
+    {
+      result = result + arrToString(ary[j]);
+      if(j != ary.length - 1) result = result + ", ";
+    }
+    return result + "]";
   }
 
   //1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
+    int zeros = 0;
+    for(int i = 0; i < nums.length; i++)
+    {
+      for(int j = 0; j < nums[i].length; j++)
+      {
+        if (nums[i][j] == 0) zeros++;
+      }
+    }
     return 0;
   }
 
