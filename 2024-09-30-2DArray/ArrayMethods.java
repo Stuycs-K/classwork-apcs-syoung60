@@ -11,8 +11,13 @@ public static void main(String[] args){
   int[][] arr1neg = new int[][] {{4, 76, -208, 14}, {40, -951, -20, 480}}; //rectangle
   int[][] arr2neg = new int[][] {{18, -34, 19, 28}, {10, 7, 46, 39}, {38, -16, 3, -91}, {33, 9, -47, -4}}; //square
   int[][] arr3neg = new int[][] {{-2, 8, -3, 4}, {1, 0, 5, -9, 5}, {6, 2, -9}}; //jagged
+  int[][] arr0copy = copy(arr0);
+  int[][] arr1copy = copy(arr1);
+  int[][] arr2negcopy = copy(arr2neg);
+  int[][] arr3negcopy = copy(arr3neg);
 
 //System.out.println(arr0[0].length);
+//check if copies dont change by makeing more arrays
 
   System.out.println("Test if arrToStrings can make strings of 2D arrays");
   System.out.println("Expected for arr0:  [[89, 1, 73], [710, 35, 5, 2], [0], [46, 209]]");
@@ -43,16 +48,26 @@ public static void main(String[] args){
   System.out.println("\n Test if copy can return a copy");
   System.out.println("Do the addresses of the og and copy match? arr0: " + (arr0 == copy(arr0)));
   System.out.println("Original: " + arrToString(arr0));
-  System.out.println("Copy:     " + arrToString(copy(arr0)));
+  System.out.println("Copy:     " + arrToString(arr0copy));
+  System.out.println("arr0[0][3] = 1000");
+  arr0[0][2] = 1000;
+  System.out.println("Original: " + arrToString(arr0));
+  System.out.println("Copy:     " + arrToString(arr0copy));
+
   System.out.println("Do the addresses of the og and copy match? arr0: " + (arr1 == copy(arr1)));
   System.out.println("Original: " + arrToString(arr1));
-  System.out.println("Copy:     " + arrToString(copy(arr1)));
+  System.out.println("Copy:     " + arrToString(arr1copy));
+  System.out.println("arr1[0][3] = 1000");
+  arr1[0][2] = 1000;
+  System.out.println("Original: " + arrToString(arr1));
+  System.out.println("Copy:     " + arrToString(arr1copy));
+
   System.out.println("Do the addresses of the og and copy match? arr0: " + (arr2neg == copy(arr2neg)));
   System.out.println("Original: " + arrToString(arr2neg));
-  System.out.println("Copy:     " + arrToString(copy(arr2neg)));
+  System.out.println("Copy:     " + arrToString(arr2negcopy));
   System.out.println("Do the addresses of the og and copy match? arr0: " + (arr3neg == copy(arr3neg)));
   System.out.println("Original: " + arrToString(arr3neg));
-  System.out.println("Copy:     " + arrToString(copy(arr3neg)));
+  System.out.println("Copy:     " + arrToString(arr3negcopy));
 
   System.out.println("\n Test if replaceNegative can change existing array");
   System.out.println("Original: " + arrToString(arr0neg));
