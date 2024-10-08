@@ -17,9 +17,17 @@ public class ArrayDemo{
     int[][] arr1copy = copy(arr1);
     int[][] arr2negcopy = copy(arr2neg);
     int[][] arr3negcopy = copy(arr3neg);
-    System.out.println("Compare Arrays.toString to my arrToString");
+
+    System.out.println("Test cases for arrToString")
+    System.out.println("Compare Arrays.toString to my arrToString: arr0");
     System.out.println(Arrays.toString(arr0));
-    System.out.println(arrToString(arr0));
+    System.out.println(arrToString(arr0) + "     Are they the same?  " + ((Arrays.toString(arr0)).equals(arrToString(arr0))));
+    System.out.println("Compare Arrays.toString to my arrToString: arr2");
+    System.out.println(Arrays.toString(arr2));
+    System.out.println(arrToString(arr2) + "     Are they the same?  " + ((Arrays.toString(arr2)).equals(arrToString(arr2))));
+    System.out.println("Compare Arrays.toString to my arrToString arr3neg");
+    System.out.println(Arrays.toString(arr3neg));
+    System.out.println(arrToString(arr3neg) + "     Are they the same?  " + ((Arrays.toString(arr3neg)).equals(arrToString(arr3neg))));
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
