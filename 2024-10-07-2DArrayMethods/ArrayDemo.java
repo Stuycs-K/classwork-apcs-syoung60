@@ -28,6 +28,10 @@ public class ArrayDemo{
     System.out.println("Compare Arrays.toString to my arrToString arr3neg");
     System.out.println(Arrays.toString(arr3neg));
     System.out.println(arrToString(arr3neg) + "     Are they the same?  " + ((Arrays.toString(arr3neg)).equals(arrToString(arr3neg))));
+
+    System.out.println("\nTest cases for countZeros2D");
+
+    System.out.println("\nTest cases for htmlTable");
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -146,6 +150,16 @@ public class ArrayDemo{
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][]nums){
-    return "";
+    String result = "<table>";
+    for(int i = 0; i < nums.length; i++)
+    {
+      result = reuslt + <tr>;
+      for (int j = 0; j < nums[i].length; j++)
+      {
+        result = result + "<td>" + nums[i][j] + "</td>";
+      }
+      result = result + </tr>;
+    }
+    return result + "</table>";
   }
 }
