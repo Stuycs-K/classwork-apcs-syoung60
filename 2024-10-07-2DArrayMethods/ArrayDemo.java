@@ -9,6 +9,7 @@ public class ArrayDemo{
     int[][] arr1 = new int[][] {{4, 76, 208, 14}, {40, 951, 20, 480}}; //rectangle
     int[][] arr2 = new int[][] {{18, 34, 19, 28}, {10, 7, 46, 39}, {38, 16, 3, 91}, {33, 9, 47, 4}}; //square
     int[][] arr3 = new int[][] {{2, 8, 3, 4}, {1, 0, 5, 9, 5}, {6, 2, 9}}; //jagged
+    int[][] arr4 = new int[][] {{0, -190, 3, 60, 0}, {-41, 8, 0, 0, -39, 10}, {-4, 0, 626, 55, 0, 0, -20, 0, 93}};//8 zeros
     int[][] arr0neg = new int[][] {{89, 1, 73}, {710, 35, -5, 2}, {0}, {46, 209}}; //jagged
     int[][] arr1neg = new int[][] {{4, 76, -208, 14}, {40, -951, -20, 480}}; //rectangle
     int[][] arr2neg = new int[][] {{18, -34, 19, 28}, {10, 7, 46, 39}, {38, -16, 3, -91}, {33, 9, -47, -4}}; //square
@@ -30,8 +31,16 @@ public class ArrayDemo{
     System.out.println(arrToString(arr3neg) + "     Are they the same?  " + ((Arrays.deepToString(arr3neg)).equals(arrToString(arr3neg))));
 
     System.out.println("\nTest cases for countZeros2D");
+    System.out.println("Expects 1 : " + countZeros2D(arr0) + "   " + (1 == countZeros2D(arr0)));
+    System.out.println("Expects 0 : " + countZeros2D(arr1) + "   " + (0 == countZeros2D(arr1)));
+    System.out.println("Expects 0 : " + countZeros2D(arr2) + "   " + (0 == countZeros2D(arr2)));
+    System.out.println("Expects 1 : " + countZeros2D(arr3) + "   " + (1 == countZeros2D(arr3)));
+    System.out.println("Expects 8 : " + countZeros2D(arr4) + "   " + (8 == countZeros2D(arr4)));
+
 
     System.out.println("\nTest cases for htmlTable");
+     System.out.println("Expected: <table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>")
+
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -68,7 +77,7 @@ public class ArrayDemo{
         if (nums[i][j] == 0) zeros++;
       }
     }
-    return 0;
+    return zeros;
   }
 
   //2. Calculate the sum of a 2d array
