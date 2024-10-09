@@ -18,16 +18,16 @@ public class ArrayDemo{
     int[][] arr2negcopy = copy(arr2neg);
     int[][] arr3negcopy = copy(arr3neg);
 
-    System.out.println("Test cases for arrToString")
+    System.out.println("Test cases for arrToString");
     System.out.println("Compare Arrays.toString to my arrToString: arr0");
-    System.out.println(Arrays.toString(arr0));
-    System.out.println(arrToString(arr0) + "     Are they the same?  " + ((Arrays.toString(arr0)).equals(arrToString(arr0))));
+    System.out.println(Arrays.deepToString(arr0));
+    System.out.println(arrToString(arr0) + "     Are they the same?  " + ((Arrays.deepToString(arr0)).equals(arrToString(arr0))));
     System.out.println("Compare Arrays.toString to my arrToString: arr2");
-    System.out.println(Arrays.toString(arr2));
-    System.out.println(arrToString(arr2) + "     Are they the same?  " + ((Arrays.toString(arr2)).equals(arrToString(arr2))));
+    System.out.println(Arrays.deepToString(arr2));
+    System.out.println(arrToString(arr2) + "     Are they the same?  " + ((Arrays.deepToString(arr2)).equals(arrToString(arr2))));
     System.out.println("Compare Arrays.toString to my arrToString arr3neg");
-    System.out.println(Arrays.toString(arr3neg));
-    System.out.println(arrToString(arr3neg) + "     Are they the same?  " + ((Arrays.toString(arr3neg)).equals(arrToString(arr3neg))));
+    System.out.println(Arrays.deepToString(arr3neg));
+    System.out.println(arrToString(arr3neg) + "     Are they the same?  " + ((Arrays.deepToString(arr3neg)).equals(arrToString(arr3neg))));
 
     System.out.println("\nTest cases for countZeros2D");
 
@@ -37,10 +37,10 @@ public class ArrayDemo{
   //0. Include your prior methods to help you print a 1D/2D array of ints.
   public static String arrToString(int[]ary){
     String ans = "[";
-    for(int i = 0; i < nums.length; i++)
+    for(int i = 0; i < ary.length; i++)
     {
-      ans = ans + nums[i];
-      if(i != nums.length - 1) ans = ans + ", ";
+      ans = ans + ary[i];
+      if(i != ary.length - 1) ans = ans + ", ";
     }
     return ans + "]";
   }
@@ -153,12 +153,12 @@ public class ArrayDemo{
     String result = "<table>";
     for(int i = 0; i < nums.length; i++)
     {
-      result = reuslt + <tr>;
+      result = result + "<tr>";
       for (int j = 0; j < nums[i].length; j++)
       {
         result = result + "<td>" + nums[i][j] + "</td>";
       }
-      result = result + </tr>;
+      result = result + "</tr>";
     }
     return result + "</table>";
   }
