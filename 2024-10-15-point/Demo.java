@@ -25,5 +25,13 @@ public class Demo{
     System.out.println(p4);
     Point p5 = new Point(p4);
     System.out.println(p5);
+
+    //Triangle
+    Point T1 = new Point(0, 0);
+    Point T2 = new Point(1, 0);
+    Point T3 = new Point(0.5, (0.5 * Math.sqrt(3)));
+    System.out.println( distance(T1,T2));
+    System.out.println( Point.distance(T1,T3));
+    System.out.println( T1.distanceTo(T3));
   }
 }
