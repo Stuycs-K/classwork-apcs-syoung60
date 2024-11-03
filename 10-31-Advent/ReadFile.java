@@ -9,7 +9,10 @@ public class ReadFile {
     try {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
-      //CODE THAT SCANS THE FILE.
+      while(input.hasNextLine()){
+        System.out.println(input.nextLine());
+        input.nextLine();
+      }
       input.close();//releases the file from your program
 
     } catch (FileNotFoundException ex) {
