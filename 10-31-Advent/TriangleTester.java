@@ -5,15 +5,13 @@ import java.util.Scanner;
 public class TriangleTester{
     
     public static void main(String[] args) {
-        System.out.println("1, 2, 1: " + validTriangle("1", "2", "1"));
-        System.out.println("3, 2, 3: " + validTriangle("3", "2", "3"));
+        System.out.println("1, 2, 1: " + validTriangle(1, 2, 1));
+        System.out.println("3, 2, 3: " + validTriangle(3, 2, 3));
         countTrianglesA("inputTri.txt");
+        countTrianglesB("inputTri.txt");
     }
 
-    public static boolean validTriangle(String x, String y, String z){
-        int a = Integer.parseInt(x);
-        int b = Integer.parseInt(y);
-        int c = Integer.parseInt(z);
+    public static boolean validTriangle(int a, int b, int c){
         if(a + b > c &&
            b + c > a &&
            c + a > b) return true;
@@ -27,7 +25,9 @@ public class TriangleTester{
             File file = new File(filename);
             Scanner input = new Scanner(file); 
             while(input.hasNextLine()){
-                if(validTriangle(input.next(), input.next(), input.next())) sum = sum + 1;
+                if(validTriangle(Integer.parseInt(input.next()),
+                                 Integer.parseInt(input.next()), 
+                                 Integer.parseInt(input.next()))) sum = sum + 1;
                 if(input.hasNextLine()) input.nextLine();
             }
             input.close();
@@ -40,8 +40,36 @@ public class TriangleTester{
     }
 
     public static int countTrianglesB(String filename){
-        //m
-        return 0;
+        int sum = 0;
+        try{
+            File file = new File(filename);
+            Scanner input = new Scanner(file); 
+
+            while(input.hasNextLine()){
+                int side101 = Integer.parseInt(input.next());
+                int side201 = Integer.parseInt(input.next());
+                int side301 = Integer.parseInt(input.next());
+
+                int side102 = Integer.parseInt(input.next());
+                int side202 = Integer.parseInt(input.next());
+                int side302 = Integer.parseInt(input.next());
+
+                int side103 = Integer.parseInt(input.next());
+                int side203 = Integer.parseInt(input.next());
+                int side303 = Integer.parseInt(input.next());
+
+                if(validTriangle(side101, side102, side103)) sum = sum + 1;
+                if(validTriangle(side201, side202, side203)) sum = sum + 1;
+                if(validTriangle(side301, side302, side303)) sum = sum + 1;
+                if(input.hasNextLine()) input.nextLine();
+            }
+            input.close();
+        }catch(FileNotFoundException ex){
+            System.out.println("File not found");
+        }
+
+        System.out.println(sum);
+        return sum;
     }
 
     
