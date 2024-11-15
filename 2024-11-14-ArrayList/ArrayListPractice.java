@@ -42,6 +42,11 @@ public class ArrayListPractice {
       ArrayList<String> testCase2 = createRandomArray(10);
       System.out.println(testCase2);
       System.out.println(makeReversedList(testCase2));
+
+    /*ArrayList<String> longTest = createRandomArray(200000);
+    //System.out.println(longTest);
+    System.out.println(makeReversedList(longTest));*/
+    
     }
 
 
