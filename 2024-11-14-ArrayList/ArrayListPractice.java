@@ -32,16 +32,27 @@ public class ArrayListPractice {
       System.out.println("" + testCase + "\n");
     }
     System.out.println(createRandomArray(30));
+    System.out.println(" \n\n\n REVERSED TEST");
     
-    ArrayList<String> longTest = createRandomArray(200000);
+    /*ArrayList<String> longTest = createRandomArray(200000);
     System.out.println(longTest);
     replaceEmpty(longTest);
     System.out.println(longTest);*/
+     for (int count = 0; count < 20; count++){
+      ArrayList<String> testCase2 = createRandomArray(10);
+      System.out.println(testCase2);
+      System.out.println(makeReversedList(testCase2));
+    }
+
 
   }
 
   public static ArrayList<String> makeReversedList( ArrayList<String> original){
-    ArrayList<String> ans = createRandomArray(original.size())
+    ArrayList<String> ans = new ArrayList<String>();
+    for(int i = 0; i < original.size(); i++){
+        ans.add(original.get(original.size() - i - 1));
+    }
+    return ans;
   //return a new ArrayList that is in the reversed order of the original.
 }
 }
