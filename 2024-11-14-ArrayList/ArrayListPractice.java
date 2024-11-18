@@ -2,24 +2,23 @@ import java.util.ArrayList;
 
 public class ArrayListPractice {
   public static void main(String args[]) {
-
+    System.out.println("  EMPTY TEST");
     for (int count = 0; count < 20; count++){
       ArrayList<String> testCase = createRandomArray(10);
       System.out.println(testCase);
       replaceEmpty(testCase);
       System.out.println("" + testCase + "\n");
     }
-
-    System.out.println(" \n\n\n REVERSED TEST");
-    
     /*ArrayList<String> longTest = createRandomArray(200000);
-    System.out.println(longTest);
-    replaceEmpty(longTest);
-    System.out.println(longTest);*/
+        System.out.println(longTest);
+        replaceEmpty(longTest);
+        System.out.println(longTest);*/
+    
+    System.out.println(" \n\n\n REVERSED TEST");
      for (int count = 0; count < 20; count++){
       ArrayList<String> testCase2 = createRandomArray(10);
       System.out.println(testCase2);
-      System.out.println(makeReversedList(testCase2));}
+      System.out.println(makeReversedList(testCase2) + "\n");}
 
     /*ArrayList<String> longTest = createRandomArray(200000);
     //System.out.println(longTest);
@@ -31,13 +30,21 @@ public class ArrayListPractice {
       System.out.println(testCaseA);
       ArrayList<String> testCaseB = createRandomArray(5);
       System.out.println(testCaseB);
-      System.out.println(mixLists(testCaseA, testCaseB));}
+      System.out.println(mixLists(testCaseA, testCaseB) + "\n");}
      for (int count = 0; count < 10; count++){
       ArrayList<String> testCaseA = createRandomArray(8);
       System.out.println(testCaseA);
       ArrayList<String> testCaseB = createRandomArray(5);
       System.out.println(testCaseB);
-      System.out.println(mixLists(testCaseA, testCaseB));}
+      System.out.println(mixLists(testCaseA, testCaseB) + "\n");}
+    /*ArrayList<String> longTestA = createRandomArray(100000);
+    ArrayList<String> longTestB = createRandomArray(100000);
+    //System.out.println(longTest);
+    System.out.println(mixLists(longTestA, longTestB));*/
+    /*ArrayList<String> longTestA = createRandomArray(200000);
+    ArrayList<String> longTestB = createRandomArray(200000);
+    //System.out.println(longTest);
+    System.out.println(mixLists(longTestA, longTestB));*/
 
 
     
