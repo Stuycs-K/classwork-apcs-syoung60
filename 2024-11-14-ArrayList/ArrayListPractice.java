@@ -9,7 +9,7 @@ public class ArrayListPractice {
       replaceEmpty(testCase);
       System.out.println("" + testCase + "\n");
     }
-    System.out.println(createRandomArray(30));
+
     System.out.println(" \n\n\n REVERSED TEST");
     
     /*ArrayList<String> longTest = createRandomArray(200000);
@@ -19,13 +19,29 @@ public class ArrayListPractice {
      for (int count = 0; count < 20; count++){
       ArrayList<String> testCase2 = createRandomArray(10);
       System.out.println(testCase2);
-      System.out.println(makeReversedList(testCase2));
+      System.out.println(makeReversedList(testCase2));}
 
     /*ArrayList<String> longTest = createRandomArray(200000);
     //System.out.println(longTest);
     System.out.println(makeReversedList(longTest));*/
+
+    System.out.println(" \n\n\n MIX TEST");
+    for (int count = 0; count < 10; count++){
+      ArrayList<String> testCaseA = createRandomArray(5);
+      System.out.println(testCaseA);
+      ArrayList<String> testCaseB = createRandomArray(5);
+      System.out.println(testCaseB);
+      System.out.println(mixLists(testCaseA, testCaseB));}
+     for (int count = 0; count < 10; count++){
+      ArrayList<String> testCaseA = createRandomArray(8);
+      System.out.println(testCaseA);
+      ArrayList<String> testCaseB = createRandomArray(5);
+      System.out.println(testCaseB);
+      System.out.println(mixLists(testCaseA, testCaseB));}
+
+
     
-    }
+    
   }
 
 
@@ -64,16 +80,16 @@ public class ArrayListPractice {
   public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
     ArrayList<String> ans = new ArrayList<String>();
     int i = 0;
-    while(i < a.length && i < b.length){
+    while(i < a.size() && i < b.size()){
       ans.add(a.get(i));
       ans.add(b.get(i));
       i++;
     }
-    while(a.length > i){
+    while(a.size() > i){
       ans.add(a.get(i));
       i++;
     }
-    while(b.length > i){
+    while(b.size() > i){
       ans.add(b.get(i));
       i++;
     }
