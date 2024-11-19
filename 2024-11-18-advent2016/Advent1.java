@@ -13,8 +13,8 @@ public class AdventDay1{
         /*
         try{
             File file = new File(filename);
-            Scanner input = new Scanner(file); 
-            while(input.hasNext()){
+            Scanner input = new Scanner(file); //how to keep track of direction
+            while(input.hasNext()){            // can sum up nesw and add together with vectorsin the end
                 if(validTriangle(Integer.parseInt(input.next()),
                                  Integer.parseInt(input.next()), 
                                  Integer.parseInt(input.next()))) sum = sum + 1;
