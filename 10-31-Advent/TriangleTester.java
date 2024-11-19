@@ -3,10 +3,10 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 //Q how many triangles are valid?
 public class TriangleTester{
-    
+
     public static void main(String[] args) {
-        countTrianglesA("inputTri.txt");
-        countTrianglesB("inputTri.txt");
+        countTrianglesA("inputTri2.txt");
+        countTrianglesB("inputTri2.txt");
     }
 
     public static boolean validTriangle(int a, int b, int c){
@@ -21,10 +21,10 @@ public class TriangleTester{
         int sum = 0;
         try{
             File file = new File(filename);
-            Scanner input = new Scanner(file); 
+            Scanner input = new Scanner(file);
             while(input.hasNextLine()){
                 if(validTriangle(Integer.parseInt(input.next()),
-                                 Integer.parseInt(input.next()), 
+                                 Integer.parseInt(input.next()),
                                  Integer.parseInt(input.next()))) sum = sum + 1;
                 if(input.hasNextLine()) input.nextLine();
             }
@@ -41,7 +41,7 @@ public class TriangleTester{
         int sum = 0;
         try{
             File file = new File(filename);
-            Scanner input = new Scanner(file); 
+            Scanner input = new Scanner(file);
 
             while(input.hasNextLine()){
                 int side101 = Integer.parseInt(input.next());
@@ -70,5 +70,5 @@ public class TriangleTester{
         return sum;
     }
 
-    
+
 }
