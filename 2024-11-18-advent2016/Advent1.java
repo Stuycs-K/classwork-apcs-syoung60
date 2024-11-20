@@ -21,7 +21,11 @@ public class Advent1{
           while(input.hasNext()){
             String working = input.next();
             String dir = working.substring(0, 1);
-            String dis = working.substring(1, working.length() - 1);
+            String dis = "";
+            if(input.hasNext()) dis = working.substring(1, working.length() - 1);
+            else {dis = working.substring(1);}
+
+            //System.out.println(working);
             System.out.println(dir + "-" + dis + "----");
             }
             
