@@ -26,12 +26,14 @@ public class Advent1{
             else {dis = Integer.parseInt(working.substring(1));}
             if(dir.equals("R")) direction++;
             if(dir.equals("L")) direction--;
-            if(direction == 4 || direction == -1) direction = 0;
+            if(direction == 4) direction = 0;
+            if(direction == -1) direction = 3;
+
             if(direction == 0) y = y + dis;
             if(direction == 1) x = x + dis;
             if(direction == 2) y = y - dis;
             if(direction == 3) x = x - dis;
-            //System.out.println(working);
+            //System.out.println(x + "," + y);
             //System.out.println(dir + "-" + dis + "----");
             }
             
