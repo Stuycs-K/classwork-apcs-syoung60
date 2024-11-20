@@ -4,13 +4,21 @@ ublic class AdventDay1{
     }
     public static int bathroom(String filename){
         String ans = "";
+        try{
+          File file = new File(filename);
+          Scanner input = new Scanner(file);
+          while(input.hasNext()){
+            String line = input.next();
+
 
         /*
+        make string by adding input and space?
         try{
             File file = new File(filename);
             Scanner input = new Scanner(file); 
             while(input.hasNextLine()){
                 while(input.hasNext()){
+                String line = input.next();
                 if(next().equals.(""))} //directions are characters, but not separated tokens
                 //and turn line to string and evaluate each char
                 
