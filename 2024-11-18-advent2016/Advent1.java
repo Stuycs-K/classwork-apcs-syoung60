@@ -21,20 +21,27 @@ public class Advent1{
           while(input.hasNext()){
             String working = input.next();
             String dir = working.substring(0, 1);
-            String dis = "";
-            if(input.hasNext()) dis = working.substring(1, working.length() - 1);
-            else {dis = working.substring(1);}
-
+            int dis = 0;
+            if(input.hasNext()) dis = Integer.parseInt(working.substring(1, working.length() - 1));
+            else {dis = Integer.parseInt(working.substring(1));}
+            if(dir.equals("R")) direction++;
+            if(dir.equals("L")) direction--;
+            if(direction == 4 || direction == -1) direction = 0;
+            if(direction == 0) y = y + dis;
+            if(direction == 1) x = x + dis;
+            if(direction == 2) y = y - dis;
+            if(direction == 3) x = x - dis;
             //System.out.println(working);
-            System.out.println(dir + "-" + dis + "----");
+            //System.out.println(dir + "-" + dis + "----");
             }
             
           }catch (FileNotFoundException ex) {
             System.out.println("File not found");
             }
 
-            System.out.println("help me");
-            return 0;
+            System.out.println(x + " in the x \n" + y + " in the y");
+            System.out.println(Math.abs(x) + Math.abs(y));
+            return Math.abs(x) + Math.abs(y);
 
 
         }
