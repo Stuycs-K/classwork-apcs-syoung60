@@ -15,9 +15,16 @@ public class Advent1{
         try{
           File file = new File(filename);
           Scanner input = new Scanner(file);
-          while(input.hasNextLine()){
-            String line = input.nextLine();
-            System.out.println(line);}
+          //String line = input.nextLine();
+          //System.out.println(line);
+          //cut out all commas
+          while(input.hasNext()){
+            String working = input.next();
+            String dir = working.substring(0, 1);
+            String dis = working.substring(1, working.length() - 1);
+            System.out.println(dir + "-" + dis + "----");
+            }
+            
           }catch (FileNotFoundException ex) {
             System.out.println("File not found");
             }
