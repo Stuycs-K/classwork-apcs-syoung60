@@ -3,12 +3,23 @@ ublic class AdventDay1{
         lkk;
     }
     public static int bathroom(String filename){
-        String ans = "";
+        String ans = "5";
+        int num = 5;
         try{
           File file = new File(filename);
           Scanner input = new Scanner(file);
           while(input.hasNext()){
             String line = input.next();
+            String[] lineArr = line.split("");
+            for(int i = 0; i < lineArr.length; i++){
+                if(lineArr[i].equals("U")){
+                    if(!=(num == 1||num == 2||num == 3)){
+                        num = num - 3;
+                    } 
+                }
+                //repeat if statement for each d, l, r, with exceptions
+
+            }
 
 
         /*
