@@ -12,7 +12,10 @@ ublic class AdventDay1{
 
 
         /*
-        make string by adding input and space?
+        make string by adding input and space? 
+        line.split("") makes a String array where the string is cut by the given string
+        this would reurn each character ""
+        in a grid, up is -3, down is +3, r and l are -1 and +1 except for edge nummbers
         try{
             File file = new File(filename);
             Scanner input = new Scanner(file); 
