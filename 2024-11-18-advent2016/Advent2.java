@@ -1,4 +1,4 @@
-ublic class AdventDay1{
+public class AdventDay2{
     public static void main(String[] args){
         lkk;
     }
@@ -19,7 +19,7 @@ ublic class AdventDay1{
                 }
                 //repeat if statement for each d, l, r, with exceptions
 
-            }
+           
 
 
         /*
@@ -49,3 +49,4 @@ ublic class AdventDay1{
     }
   
 }
+
