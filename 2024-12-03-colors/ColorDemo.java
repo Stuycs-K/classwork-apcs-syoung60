@@ -7,10 +7,21 @@ public class ColorDemo{
         }
       }
     }
+    System.out.print("\n");
+    for(int i = 0; i < 10; i++){
+      int g = 100;
+      if(i %10 == 0) g+=9;
+      for(int g = 0; g <= 32; g+=4){
+        System.out.print("\u001b[38;2;"+r+";"+g+";"+b+";7m.");
+      }
+    }
     for(int rg = 100; rg < 180; rg+=2){
       for(int i = 0; i < 100; i++){
         System.out.print("\u001b[38;2;"+rg+";"+(rg + 60)+";"+250+";7m.");
       }
+    }
+  for(int i = 0; i < 100; i++){
+        System.out.print("\u001b[38;2;"+100+";"+200+";"+150+";7m.");
     }
 
   }
