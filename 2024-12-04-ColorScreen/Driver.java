@@ -41,9 +41,14 @@ public class Driver{
     public static void sky(int i, int rows){
         for(int f = 0; f <3*rows; f+=3){
             System.out.print("\u001b[38;2;"+i+";"+i+";"+i+";7m.");
-        
             for(int j = 0; j < 78; j++){
-                System.out.print("\u001b[38;2;"+(f+10)+";"+(f + 10)+";"+120+";7m.");
+                if((f % 4 == 0 && j % 9 == 0)|| (f % 8 == 0 && j % 6 == 0)){
+                    System.out.print("\u001b[38;2;"+200+";"+200+";"+100+";7m.");
+                }
+                else{
+                    System.out.print("\u001b[38;2;"+(f+10)+";"+(f + 10)+";"+120+";7m.");
+                }
+                
                 //System.out.println()
             }
             System.out.print("\u001b[38;2;"+i+";"+i+";"+i+";7m." + "\n");
