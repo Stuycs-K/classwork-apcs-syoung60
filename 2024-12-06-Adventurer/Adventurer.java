@@ -18,7 +18,7 @@ public abstract class Adventurer{
 
   //concrete method written using abstract methods.
   //refill special resource by amount, but only up to at most getSpecialMax()
-  /*public int restoreSpecial(int n){
+  public int restoreSpecial(int n){
       if( n > getSpecialMax() - getSpecial()){
               n = getSpecialMax() - getSpecial();
       }
@@ -28,10 +28,10 @@ public abstract class Adventurer{
 
   //Abstract methods are meant to be implemented in child classes.
 
-
+  /*
     all adventurers must have a custom special
     consumable resource (mana/rage/money/witts etc)
-
+  */
   //give it a short name (fewer than 13 characters)
   public abstract String getSpecialName();
   //accessor methods
@@ -39,10 +39,10 @@ public abstract class Adventurer{
   public abstract void setSpecial(int n);
   public abstract int getSpecialMax();
 
-
+  /*
     all adventurers must have a way to attack enemies and
     support their allys
-
+  */
   //hurt or hinder the target adventurer
   public abstract String attack(Adventurer other);
 
@@ -54,11 +54,10 @@ public abstract class Adventurer{
 
   //hurt or hinder the target adventurer, consume some special resource
   public abstract String specialAttack(Adventurer other);
-*/
+
   /*
     standard methods
   */
-
   public void applyDamage(int amount){
     this.HP -= amount;
   }

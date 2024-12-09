@@ -1,21 +1,23 @@
 public class Thief extends Adventurer{
   private int money;
+  private int maxMoney = 1000000;
 
   public Thief(String name){
     super(name);
+    this.money = 10;
   }
   public Thief(String name, int hp){
     super(name, hp);
+    this.money = 10;
+  }
+  public Thief(String name, int hp, int coins){
+    super(name, hp);
+    this.money = coins;
   }
 
-  //Abstract methods are meant to be implemented in child classes.
 
-  /*
-    all adventurers must have a custom special
-    consumable resource (mana/rage/money/witts etc)
-  */
-  //give it a short name (fewer than 13 characters)
-  public static String getSpecialName(){
+
+  public String getSpecialName(){
     return "money";
   }
   //accessor methods
@@ -25,25 +27,30 @@ public class Thief extends Adventurer{
   public void setSpecial(int n){
     money = n;
   }
-  public static int getSpecialMax(){
-    return 1;
+  public int getSpecialMax(){
+    return maxMoney;
   }
 
-  /*
-    all adventurers must have a way to attack enemies and
-    support their allys
 
   //hurt or hinder the target adventurer
-  public abstract String attack(Adventurer other);
+  public String attack(Adventurer other){
+    return "taser";
+  }
 
   //heall or buff the target adventurer
-  public abstract String support(Adventurer other);
+  public String support(Adventurer other){
+    return "feed";
+  }
 
   //heall or buff self
-  public abstract String support();
+  public String support(){
+    return "eat";
+  }
 
   //hurt or hinder the target adventurer, consume some special resource
-  public abstract String specialAttack(Adventurer other);
-  */
+  public String specialAttack(Adventurer other){
+    return "steal";
+  }
+  
 
 }
