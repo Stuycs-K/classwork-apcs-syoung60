@@ -19,10 +19,10 @@ public class Thief extends Adventurer{
     return "money";
   }
   //accessor methods
-  public static int getSpecial(){
+  public int getSpecial(){
     return money;
   }
-  public static void setSpecial(int n){
+  public void setSpecial(int n){
     money = n;
   }
   public static int getSpecialMax(){
