@@ -17,7 +17,7 @@ class Game {
             !move.equals("sp") || !move.equals("special")||
             !move.equals("su") || !move.equals("support")||
             !move.equals("quit")){
-              String move = userInput.nextLine();
+              move = userInput.nextLine();
             }
       if(move.equals("a") || move.equals("attack")){
         p1.attack(p2);
@@ -29,19 +29,18 @@ class Game {
       else if(move.equals("quit")){
         System.out.println("Player has quit the game");
         return;}
-      else {System.out.println("ERROR")}
+      else {System.out.println("ERROR");}
 
       int Enemove = (int)(Math.random() * 3);
       if(Enemove == 0){
         p2.attack(p1);
-        System.out.println("Enemy attack")}
+        System.out.println("Enemy attack");}
       else if(Enemove == 1){
         p2.specialAttack(p1);
-        System.out.println("Enemy special")}
+        System.out.println("Enemy special");}
       else{
         p2.support();
-        System.out.println("Enemy support")}
-
+        System.out.println("Enemy support");}
     }
     System.out.println(p1.getName()+": "+ p1.getHP() + "/" +p1.getmaxHP() +"HP, "
                        + p1.getSpecial()+"/" + p1.getSpecialMax() + p1.getSpecialName());
