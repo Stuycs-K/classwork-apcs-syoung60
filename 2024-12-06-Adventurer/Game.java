@@ -13,7 +13,13 @@ class Game {
                        + p2.getSpecial()+"/" + p2.getSpecialMax() + p2.getSpecialName());
       System.out.println("Type: (a)ttack / (sp)ecial / (su)pport / quit");
       String move = userInput.nextLine(); 
-     /* if(move.equals("a") || move.equals("attack")){
+      while(!move.equals("a") || !move.equals("attack") ||
+            !move.equals("sp") || !move.equals("special")||
+            !move.equals("su") || !move.equals("support")||
+            !move.equals("quit")){
+              String move = userInput.nextLine();
+            }
+      if(move.equals("a") || move.equals("attack")){
         p1.attack(p2);
         System.out.println(p1.getName() + " attacked " + p2.getName());}
       else if(move.equals("sp") || move.equals("special")){
@@ -21,8 +27,8 @@ class Game {
         System.out.println(p1.getName() + " specialAttacked " + p2.getName());}
       else if(move.equals("su") || move.equals("support")) p1.support();
       else if(move.equals("quit")) return;
-      else {System.out.println("INVALID MOVE, Type: (a)ttack / (sp)ecial / (su)pport / quit")}
-*/
+      else {System.out.println("ERROR")}
+
     
 
 
