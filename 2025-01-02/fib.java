@@ -1,14 +1,6 @@
 public class fib{
   public static void main(String[] args){
-    System.out.println(fib(0));
-    System.out.println(fib(1));
-    System.out.println(fib(2));
-    System.out.println(fib(3));
-    System.out.println(fib(4));
-    System.out.println(fib(5));
-    System.out.println(fib(6));
-    System.out.println(fib(7));
-    System.out.println(fib(8));
+    fib(40);
   }
 
   public static int fib(int n){
